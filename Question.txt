@@ -1,0 +1,250 @@
+1️⃣ ما فكرة المشروع؟
+
+الإجابة:
+المشروع بيقوم بتحليل النصوص واستخراج أهم الكلمات منها باستخدام TF-IDF، وبعد كده تصنيف النصوص باستخدام Logistic Regression.
+
+2️⃣ ليه اخترتم TF-IDF؟
+
+الإجابة:
+لأنه بيدي وزن أكبر للكلمات المهمة وبيقلل تأثير الكلمات الشائعة اللي بتتكرر في كل النصوص.
+
+3️⃣ يعني إيه Term-Document Matrix؟
+
+الإجابة:
+دي مصفوفة الصفوف فيها تمثل الوثائق، والأعمدة تمثل الكلمات، والقيم بتكون وزن كل كلمة في كل وثيقة باستخدام TF-IDF.
+
+4️⃣ ليه استخدمت Logistic Regression؟
+
+الإجابة:
+لأنه مناسب جدًا لمشاكل التصنيف، وسهل وسريع، وبيشتغل كويس مع البيانات النصية بعد تحويلها لأرقام.
+
+5️⃣ هل Logistic Regression ينفع مع النصوص؟
+
+الإجابة:
+آه، بعد ما النص يتحول لأرقام باستخدام TF-IDF، الموديل بيتعامل مع أرقام عادي.
+
+6️⃣ يعني إيه Label؟
+
+الإجابة:
+الـ Label هو الفئة أو التصنيف اللي كل نص تابع له، زي موجب/سالب أو 0 و 1.
+
+7️⃣ قسمتوا الداتا إزاي؟
+
+الإجابة:
+قسمنا الداتا إلى تدريب واختبار بنسبة 80% تدريب و20% اختبار علشان نقيّم أداء الموديل على بيانات جديدة.
+
+8️⃣ قيمتوا الموديل إزاي؟
+
+الإجابة:
+استخدمنا Accuracy و Classification Report و Confusion Matrix.
+
+9️⃣ ليه ما استخدمتوش Linear Regression؟
+
+الإجابة:
+لأن Linear Regression بتستخدم للتنبؤ بقيم رقمية، لكن مشروعنا تصنيف، فـ Logistic Regression أنسب.
+
+🔟 ليه حفظتوا الموديل والـ Vectorizer؟
+
+الإجابة:
+علشان نستخدمهم بعد كده على نصوص جديدة من غير ما نعيد التدريب من الأول.
+
+1️⃣1️⃣ الفرق بين TF و IDF؟
+
+الإجابة:
+TF بيقيس عدد مرات ظهور الكلمة داخل النص،
+IDF بيقيس أهمية الكلمة بالنسبة لكل النصوص.
+
+1️⃣2️⃣ هل محتاجين Inverted Index؟
+
+الإجابة:
+لا، الـ Inverted Index بيستخدم أكتر في محركات البحث، لكن مشروعنا تصنيف نصوص.
+
+1️⃣3️⃣ إيه خطوات المشروع باختصار؟
+
+الإجابة:
+تنظيف النص → تحويله لـ TF-IDF → تدريب الموديل → تقييمه → اختباره على نص جديد.
+
+1️⃣4️⃣ بيحصل إيه لما ندخل نص جديد؟
+
+الإجابة:
+النص بيتحول لأرقام باستخدام نفس TF-IDF، وبعدها الموديل يتنبأ بالتصنيف.
+
+1️⃣5️⃣ أصعب جزء في المشروع؟
+
+الإجابة:
+تجهيز الداتا واختيار الطريقة المناسبة لتمثيل النص.1️⃣ ما فكرة المشروع؟
+
+الإجابة:
+المشروع بيقوم بتحليل النصوص واستخراج أهم الكلمات منها باستخدام TF-IDF، وبعد كده تصنيف النصوص باستخدام Logistic Regression.
+
+2️⃣ ليه اخترتم TF-IDF؟
+
+الإجابة:
+لأنه بيدي وزن أكبر للكلمات المهمة وبيقلل تأثير الكلمات الشائعة اللي بتتكرر في كل النصوص.
+
+3️⃣ يعني إيه Term-Document Matrix؟
+
+الإجابة:
+دي مصفوفة الصفوف فيها تمثل الوثائق، والأعمدة تمثل الكلمات، والقيم بتكون وزن كل كلمة في كل وثيقة باستخدام TF-IDF.
+
+4️⃣ ليه استخدمت Logistic Regression؟
+
+الإجابة:
+لأنه مناسب جدًا لمشاكل التصنيف، وسهل وسريع، وبيشتغل كويس مع البيانات النصية بعد تحويلها لأرقام.
+
+5️⃣ هل Logistic Regression ينفع مع النصوص؟
+
+الإجابة:
+آه، بعد ما النص يتحول لأرقام باستخدام TF-IDF، الموديل بيتعامل مع أرقام عادي.
+
+6️⃣ يعني إيه Label؟
+
+الإجابة:
+الـ Label هو الفئة أو التصنيف اللي كل نص تابع له، زي موجب/سالب أو 0 و 1.
+
+7️⃣ قسمتوا الداتا إزاي؟
+
+الإجابة:
+قسمنا الداتا إلى تدريب واختبار بنسبة 80% تدريب و20% اختبار علشان نقيّم أداء الموديل على بيانات جديدة.
+
+8️⃣ قيمتوا الموديل إزاي؟
+
+الإجابة:
+استخدمنا Accuracy و Classification Report و Confusion Matrix.
+
+9️⃣ ليه ما استخدمتوش Linear Regression؟
+
+الإجابة:
+لأن Linear Regression بتستخدم للتنبؤ بقيم رقمية، لكن مشروعنا تصنيف، فـ Logistic Regression أنسب.
+
+🔟 ليه حفظتوا الموديل والـ Vectorizer؟
+
+الإجابة:
+علشان نستخدمهم بعد كده على نصوص جديدة من غير ما نعيد التدريب من الأول.
+
+1️⃣1️⃣ الفرق بين TF و IDF؟
+
+الإجابة:
+TF بيقيس عدد مرات ظهور الكلمة داخل النص،
+IDF بيقيس أهمية الكلمة بالنسبة لكل النصوص.
+
+1️⃣2️⃣ هل محتاجين Inverted Index؟
+
+الإجابة:
+لا، الـ Inverted Index بيستخدم أكتر في محركات البحث، لكن مشروعنا تصنيف نصوص.
+
+1️⃣3️⃣ إيه خطوات المشروع باختصار؟
+
+الإجابة:
+تنظيف النص → تحويله لـ TF-IDF → تدريب الموديل → تقييمه → اختباره على نص جديد.
+
+1️⃣4️⃣ بيحصل إيه لما ندخل نص جديد؟
+
+الإجابة:
+النص بيتحول لأرقام باستخدام نفس TF-IDF، وبعدها الموديل يتنبأ بالتصنيف.
+
+1️⃣5️⃣ أصعب جزء في المشروع؟
+
+الإجابة:
+تجهيز الداتا واختيار الطريقة المناسبة لتمثيل النص.
+
+
+
+
+
+
+
+
+
+
+
+
+1️⃣ ما فكرة المشروع؟
+
+الإجابة:
+
+The project is about extracting important textual features using TF-IDF and classifying documents using Logistic Regression.
+
+2️⃣ لماذا اخترتم TF-IDF؟
+
+الإجابة:
+
+TF-IDF gives higher importance to meaningful words and reduces the effect of common words that appear frequently in all documents.
+
+3️⃣ ما هو Term-Document Matrix؟
+
+الإجابة:
+
+It is a matrix where rows represent documents, columns represent terms, and values represent TF-IDF weights.
+
+4️⃣ لماذا استخدمتم Logistic Regression؟
+
+الإجابة:
+
+Logistic Regression is simple, fast, and performs well for text classification tasks with TF-IDF features.
+
+5️⃣ هل Logistic Regression مناسبة للنصوص؟
+
+الإجابة:
+
+Yes, because text data becomes numerical after TF-IDF, and Logistic Regression works on numerical features.
+
+6️⃣ ما هو الـ Label؟
+
+الإجابة:
+
+The label represents the class of each document, such as positive/negative or category 0/1.
+
+7️⃣ كيف تم تقسيم البيانات؟
+
+الإجابة:
+
+The dataset was split into training and testing sets using an 80/20 ratio to evaluate the model performance on unseen data.
+
+8️⃣ كيف تم تقييم النموذج؟
+
+الإجابة:
+
+We used accuracy, classification report, and confusion matrix to evaluate the model.
+
+9️⃣ لماذا لا نستخدم Linear Regression؟
+
+الإجابة:
+
+Linear Regression is used for predicting continuous values, while our problem is classification, so Logistic Regression is more suitable.
+
+🔟 لماذا حفظتم الموديل والـ Vectorizer؟
+
+الإجابة:
+
+To reuse the trained model and apply it to new unseen text without retraining.
+
+1️⃣1️⃣ ما الفرق بين TF و IDF؟
+
+الإجابة:
+
+TF measures how often a word appears in a document, while IDF measures how important the word is across all documents.
+
+1️⃣2️⃣ هل المشروع يحتاج Inverted Index؟
+
+الإجابة:
+
+No, inverted index is mainly used in search engines, while our project focuses on text classification.
+
+1️⃣3️⃣ ما الخطوات الأساسية للمشروع؟
+
+الإجابة:
+
+Text preprocessing, TF-IDF feature extraction, model training, evaluation, and testing on new data.
+
+1️⃣4️⃣ ماذا يحدث عند إدخال نص جديد؟
+
+الإجابة:
+
+The text is transformed using the saved TF-IDF vectorizer, then classified using the trained Logistic Regression model.
+
+1️⃣5️⃣ ما أهم تحدي واجهكم؟
+
+الإجابة:
+
+Preparing the dataset and choosing the appropriate features for text representation.
